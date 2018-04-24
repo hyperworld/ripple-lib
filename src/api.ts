@@ -10,6 +10,7 @@ import {
   getLedgerVersion,
   formatLedgerClose
 } from './server/server'
+import keypairs = require('ripple-keypairs')
 import getTransaction from './ledger/transaction'
 import getTransactions from './ledger/transactions'
 import getTrustlines from './ledger/trustlines'
@@ -281,6 +282,8 @@ class RippleAPI extends EventEmitter {
   submit = submit
 
   generateAddress = generateAddressAPI
+  deriveKeypair = keypairs.deriveKeypair
+  deriveAddress = keypairs.deriveAddress
   computeLedgerHash = computeLedgerHash
   signPaymentChannelClaim = signPaymentChannelClaim
   verifyPaymentChannelClaim = verifyPaymentChannelClaim

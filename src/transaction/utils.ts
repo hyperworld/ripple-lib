@@ -20,7 +20,7 @@ function formatPrepareResponse(txJSON: any): Prepare {
   }
   return {
     txJSON: JSON.stringify(txJSON),
-    instructions
+    instructions: instructions
   }
 }
 
